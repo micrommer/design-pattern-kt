@@ -1,7 +1,7 @@
 package factorymethod
 
 /**
- * The super class that contains an abstract method that force all subclasses to implement the method.
+ * The super class (Creator) that contains an abstract method that force all subclasses to implement the method.
  * The class also could have business logic inside
  */
 abstract class Printer {
@@ -27,7 +27,7 @@ interface WriteSpecification {
 }
 
 /**
- * Concrete product iml
+ * Concrete product impl
  */
 class WindowsWriteSpecification : WriteSpecification {
     override fun getLineSeparator() = ","
@@ -36,7 +36,7 @@ class WindowsWriteSpecification : WriteSpecification {
 }
 
 /**
- * Concrete product iml
+ * Concrete product impl
  */
 class MacOsWriteSpecification : WriteSpecification {
     override fun getLineSeparator() = "-"
@@ -45,7 +45,7 @@ class MacOsWriteSpecification : WriteSpecification {
 }
 
 /**
- * Concrete product iml
+ * Concrete product impl
  */
 class LinuxWriteSpecification : WriteSpecification {
     override fun getLineSeparator() = " "
