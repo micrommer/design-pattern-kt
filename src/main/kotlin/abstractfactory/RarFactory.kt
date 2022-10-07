@@ -9,9 +9,7 @@ class RarFactory : ZipFactory {
     override fun getReader() = RarReader()
 }
 
-/**
- * Products interfaces to expose to the client
- */
+//Products interfaces to expose to the client
 class RarReader : ZipReader {
     override fun read(byteArray: ByteArray) = byteArray.decodeToString()
 }
