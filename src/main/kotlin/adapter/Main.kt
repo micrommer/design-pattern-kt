@@ -1,8 +1,14 @@
 package adapter
 
 fun main() {
-    val fileLoggingAdapter = NioLoggingAdapter()
+    var fileLoggingAdapter : FileLoggingAdapter = NioLoggingAdapter()
     fileLoggingAdapter.enableTimeAppendix(true)
-    val result = fileLoggingAdapter.write("Application started successfully")
-    println(result)
+    val nioResult = fileLoggingAdapter.write("Application started successfully")
+    println(nioResult)
+
+    //------------------------------------------------------------------
+
+    fileLoggingAdapter = IoLoggingAdapter()
+    val ioResult = fileLoggingAdapter.write("Application Exist with 0")
+    println(ioResult)
 }

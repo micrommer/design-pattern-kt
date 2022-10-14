@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter
 import kotlin.io.path.exists
 
 /**
- * Here we have NIO package as the incompatible service and we want to adapt it.
+ * Here we have NIO package as the incompatible service, and we want to adapt it.
  */
 class NioLoggingAdapter : FileLoggingAdapter {
     private var timeAppendix = false
